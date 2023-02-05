@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+.deposit-outer {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.deposit-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 60px;
+  row-gap: 30px;
+}
+@media (max-width: 1200px) {
+  .deposit-blocks {
+    row-gap: calc(15px + 15 * (100vw - 320px) / 880);
+  }
+}
+@media (max-width: 1100px) {
+  .deposit-blocks {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .deposit-blocks {
+    max-width: 370px;
+    margin-bottom: 30px;
+  }
+}
+
+.deposit-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 231px;
+  width: calc(25% - 24px);
+}
+.deposit-card:not(:nth-child(4n)) {
+  margin-right: 32px;
+}
+@media (max-width: 1722px) {
+  .deposit-card {
+    width: calc(33.3333333333% - 20px);
+  }
+  .deposit-card:not(:nth-child(4n)) {
+    margin-right: 30px;
+  }
+  .deposit-card:nth-child(4n) {
+    margin-right: 30px;
+  }
+  .deposit-card:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 1100px) {
+  .deposit-card {
+    width: calc(50% - 20px);
+  }
+  .deposit-card:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  .deposit-card:nth-child(3n) {
+    margin-right: 30px;
+  }
+  .deposit-card:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .deposit-card {
+    width: 100%;
+    margin: 0;
+  }
+  .deposit-card:not(:nth-child(3n)) {
+    margin-right: 0;
+  }
+  .deposit-card:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+.deposit-card_standart {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(88, 195, 234, 0.65)), to(rgba(0, 156, 255, 0.65))), #FFFFFF;
+  background: linear-gradient(90deg, rgba(88, 195, 234, 0.65) 0%, rgba(0, 156, 255, 0.65) 100%), #FFFFFF;
+}
+.deposit-card_standart .deposit-card__footer {
+  background-color: rgba(88, 195, 234, 0.5);
+}
+.deposit-card_standart .amount__title {
+  color: #229AE0;
+}
+.deposit-card_standart .amount__body {
+  color: #1D5C98;
+}
+.deposit-card_solid {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(88, 140, 234, 0.65)), to(rgba(0, 84, 255, 0.65))), #FFFFFF;
+  background: linear-gradient(90deg, rgba(88, 140, 234, 0.65) 0%, rgba(0, 84, 255, 0.65) 100%), #FFFFFF;
+}
+.deposit-card_solid .deposit-card__footer {
+  background-color: rgba(163, 168, 255, 0.5);
+}
+.deposit-card_solid .amount__title {
+  color: #3372E5;
+}
+.deposit-card_solid .amount__body {
+  color: #1A59CE;
+}
+.deposit-card_solid .deposit-card__icon-decor {
+  right: -20px;
+}
+.deposit-card_elite {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(67, 228, 90, 0.75)), to(rgba(34, 207, 0, 0.75))), #FFFFFF;
+  background: linear-gradient(90deg, rgba(67, 228, 90, 0.75) 0%, rgba(34, 207, 0, 0.75) 100%), #FFFFFF;
+}
+.deposit-card_elite .deposit-card__footer {
+  background-color: rgba(41, 171, 1, 0.5);
+}
+.deposit-card_elite .amount__title {
+  color: #07AC03;
+}
+.deposit-card_elite .amount__body {
+  color: #037C00;
+}
+.deposit-card_elite .deposit-card__icon-decor {
+  top: 0;
+  right: -10px;
+}
+.deposit-card_grand {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(228, 207, 67, 0.75)), to(rgba(207, 161, 0, 0.75))), #FFFFFF;
+  background: linear-gradient(90deg, rgba(228, 207, 67, 0.75) 0%, rgba(207, 161, 0, 0.75) 100%), #FFFFFF;
+}
+.deposit-card_grand .deposit-card__footer {
+  background-color: rgba(207, 162, 0, 0.5);
+}
+.deposit-card_grand .amount__title {
+  color: #B18517;
+}
+.deposit-card_grand .amount__body {
+  color: #AA913B;
+}
+.deposit-card_grand .deposit-card__icon-decor {
+  top: -30px;
+  right: -10px;
+}
+.deposit-card_premium {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(228, 105, 67, 0.75)), to(rgba(207, 29, 0, 0.75))), #FFFFFF;
+  background: linear-gradient(90deg, rgba(228, 105, 67, 0.75) 0%, rgba(207, 29, 0, 0.75) 100%), #FFFFFF;
+}
+.deposit-card_premium .deposit-card__footer {
+  background-color: rgba(207, 62, 0, 0.5);
+}
+.deposit-card_premium .amount__title {
+  color: #B33300;
+}
+.deposit-card_premium .amount__body {
+  color: #7C2300;
+}
+.deposit-card_premium .deposit-card__icon-decor {
+  top: -10px;
+  right: -18px;
+}
+.deposit-card_ultra {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(207, 67, 228, 0.75)), to(rgba(136, 0, 207, 0.75))), #FFFFFF;
+  background: linear-gradient(90deg, rgba(207, 67, 228, 0.75) 0%, rgba(136, 0, 207, 0.75) 100%), #FFFFFF;
+}
+.deposit-card_ultra .deposit-card__footer {
+  background-color: rgba(207, 0, 162, 0.5);
+}
+.deposit-card_ultra .amount__title {
+  color: #7E00BE;
+}
+.deposit-card_ultra .amount__body {
+  color: #52007C;
+}
+.deposit-card_ultra .deposit-card__icon-decor {
+  top: -14px;
+  right: -3px;
+  width: 116px;
+}
+.deposit-card__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding: 13px 25px;
+}
+@media (max-width: 480px) {
+  .deposit-card__body {
+    padding-left: calc(18px + 7 * (100vw - 320px) / 160);
+    padding-right: calc(18px + 7 * (100vw - 320px) / 160);
+  }
+}
+.deposit-card__icon-decor {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 124px;
+  height: auto;
+  z-index: 1;
+}
+.deposit-card__icon-decor img {
+  max-width: 100%;
+}
+.deposit-card__title {
+  font-family: Rubik;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+  letter-spacing: 3px;
+  z-index: 10;
+  line-height: 118%;
+}
+@media (max-width: 480px) {
+  .deposit-card__title {
+    font-size: calc(26px + 4 * (100vw - 320px) / 160);
+  }
+}
+.deposit-card__amount {
+  font-family: Rubik;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  z-index: 10;
+}
+.deposit-card__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 22px;
+  z-index: 11;
+}
+@media (max-width: 480px) {
+  .deposit-card__footer {
+    padding-left: calc(16px + 6 * (100vw - 320px) / 160);
+    padding-right: calc(16px + 6 * (100vw - 320px) / 160);
+  }
+}
+.deposit-card__period {
+  margin-left: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.deposit-card__logo {
+  width: auto;
+  margin-left: 10px;
+}
+.deposit-card__logo img {
+  max-width: 100%;
+}
+
+.amount__title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.amount__body {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 118%;
+}
+@media (max-width: 480px) {
+  .amount__body {
+    font-size: calc(28px + 2 * (100vw - 320px) / 160);
+  }
+}
+
+.deposit-period {
+  font-family: Rubik;
+}
+.deposit-period__title {
+  color: #585858;
+  font-weight: 400;
+  font-size: 18px;
+}
+.deposit-period__period {
+  color: #404040;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 110%;
+  text-transform: uppercase;
+}
